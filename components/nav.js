@@ -13,52 +13,68 @@ const links = [
 })
 
 const Nav = () => (
-  <header>
-    <div>
-      <a href='#' ><img src={Brafe}/></a>
+  <header className='menu'>
+    <div className="menu-container">
+      <a href='#' className="menu-logo"><img src={Brafe}/></a>
+      <nav className="menu-nav">
+        <ul>
+          {/* <li>
+            <Link href='/'>
+              <a>Home</a>
+            </Link>
+          </li> */}
+          {links.map(({ key, href, label }) => (
+            <li key={key}>
+              <a href={href}>{label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
-    <nav>
-    <ul>
-      {/* <li>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
-      </li> */}
-      {links.map(({ key, href, label }) => (
-        <li key={key}>
-          <a href={href}>{label}</a>
-        </li>
-      ))}
-    </ul>
+  <style jsx>{`
+    .menu {
+        background: #252525;
+        padding: 20px 0;
+    }
+    .menu-container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
 
-    {/* <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
-      }
-      nav {
-        text-align: center;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      nav > ul {
-        padding: 4px 16px;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      a {
-        color: #067df7;
-        text-decoration: none;
-        font-size: 13px;
-      }
-    `}</style> */}
-  </nav>
+    .menu-container::after, .menu-container::before {
+      content: '';
+      display: table;
+      clear: both;
+    }
+      a.menu-logo{
+      display: block;
+      float: left;
+      margin-left: 10px;
+    }
+    nav.menu-nav {
+      float: right;
+      margin-right: 10px;
+    }
+
+    .menu-nav li {
+      display: inline-block;
+    }
+
+    .menu-nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.125em;
+    }
+    `}</style>
   </header>
  )
 
 export default Nav
+//clear fix
+// .menu-container::after, .menu-container::before {
+//   content: '';
+//   display: table;
+//   clear: both;
+// }

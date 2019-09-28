@@ -5,6 +5,7 @@ import CafeTwo from '../img/cafe-2.jpg'
 import Botafogo from '../img/botafogo.jpg'
 import Iguatemi from '../img/iguatemi.jpg'
 import Mineirao from '../img/mineirao.jpg'
+import Brafe from '../img/brafe.png'
 
 
 const HomePage = () => (
@@ -94,9 +95,20 @@ const HomePage = () => (
         <div>
             <p>Este é um projeto da Origamid. Mais em origamid.com<br></br>
             Praia de Botafogo, 300, 5º andar - Botafogo - Rio de Janeiro
-            </p>            
+            </p>  
+            <img src={Brafe} alt="Brafe"/>          
         </div>
     </footer>
+        <style jsx>{`
+     :global(body, h1, h2, h3, p, ul) {
+        padding: 0px;
+        margin: 0px;
+    }
+    :global(body) {
+        font-family: Georgia, serif;
+        color: #252525;
+    }
+    `}</style>
 </div>
 )
 
