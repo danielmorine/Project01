@@ -8,7 +8,6 @@ import Mineirao from '../img/mineirao.jpg'
 import Brafe from '../img/brafe.png'
 import BgIntro from '../img/bg-intro.jpg'
 
-
 const HomePage = () => (
 <div>
     <Nav/>
