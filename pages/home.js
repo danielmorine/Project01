@@ -77,9 +77,9 @@ const HomePage = () => (
         </div>
     </section>
 
-    <section>
-        <div>
-            <div>
+    <section className="signature">
+        <div className="signature-container">
+            <div className="signature-info">
                 <h2>Assine Nossa Newsletter</h2>
                 <p>promoções e eventos mensais</p>
             </div>
@@ -92,14 +92,15 @@ const HomePage = () => (
         </div>
     </section>
 
-    <footer>
-        <div>
+    <footer className="footer">
+        <div className="footer-container">
             <p>Este é um projeto da Origamid. Mais em origamid.com<br></br>
             Praia de Botafogo, 300, 5º andar - Botafogo - Rio de Janeiro
             </p>  
             <img src={Brafe} alt="Brafe"/>          
         </div>
     </footer>
+
         <style jsx>{`
      :global(body, h1, h2, h3, p, ul) {
         padding: 0px;
@@ -109,6 +110,11 @@ const HomePage = () => (
         font-family: Georgia, serif;
         color: #252525;
     }
+
+    :global(*) { 
+        box-sizing: border-box;
+    }
+
     .intro {
         background: url(${BgIntro}) no-repeat center center;
         background-size: cover;
@@ -313,6 +319,99 @@ const HomePage = () => (
         border: 3px solid;
         color: #252525;
         padding: 10x 20px;
+    }
+
+    .signature {
+        background: #e7e4d8;
+        padding: 30px 0;
+    }
+
+    .signature-container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .signature-container::after, .signature-container::before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .signature-info {
+        width: 460px;
+        margin: 0 10px;
+        float: left;
+    }
+
+    .signature-info h2 {
+        font-size: 2.25em;        
+    }
+
+    .signature-info p {
+        font-size: 1.5em;
+        font-style: italic;
+    }
+
+    .signature form {
+        width: 460px;
+        margin: 10px 10px 0 10px;
+        float: left;
+    }
+
+    .signature form label {
+        display: none;
+    }
+
+    .signature input {
+        width: 320px;
+        border: 3px solid #252525;
+        background: none;
+        font-size: 1.5em;
+        font-style: italic;
+        font-family: Georgia, serif;
+        padding: 10px;
+        float: left;
+    }
+
+    .signature button { 
+        border: none;
+        background: #252525;
+        font-family: Georgia, serif;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        width: 140px;
+        padding: 13px 0;
+        color:  #fff;
+        cursor: pointer;
+    }
+
+    .footer {
+        background: #d6d3c8;
+        padding: 40px 0;        
+    }
+
+    .footer-container {
+        max-width: 960px;
+        margin: 0 auto; //centralizar
+    }
+
+    .footer-container::after, .footer-container::before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .footer p {
+        float: left;
+        margin: 0 10px;
+        font-size: 1.125em;
+        line-height: 1.4em;
+    }
+
+    .footer img {
+        float: right;
+        margin: 0 10px;
+        display: block;
     }
 
     `}</style>
