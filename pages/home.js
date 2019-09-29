@@ -32,26 +32,26 @@ const HomePage = () => (
         <p>O café é uma bebida produzida a partir dos grãos torrados do fruto do cafeeiro. É servido tradicionalm aente quente, mas também pode ser consumido gelado. Ele é um estimulante, por possuir cafeína — geralmente 80 a 140 mg para cada 207 ml dependendo do método de preparação.</p>
     </section>
 
-    <section>
-        <div>
-            <div>
-                <h2>Paulista</h2>
+    <section className="products">
+        <div className="products-container">
+            <div className="products-item">
+                <h2 className="products-info-one">Paulista</h2>
                 <p>As condições climáticas não eram as melhores nessa primeira escolha e, entre 1800 e 1850, tentou-se o cultivo noutras regiões: o João Alberto Castelo Branco trouxe mudas do Pará</p>                
             </div>
-            <div>
-                <h2>Carioca</h2>
+            <div className="products-item">
+                <h2 className="products-info-two">Carioca</h2>
                 <p>As condições climáticas não eram as melhores nessa primeira escolha e, entre 1800 e 1850, tentou-se o cultivo noutras regiões: o João Alberto Castelo Branco trouxe mudas do Pará</p>
             </div>
-            <div>
-                <h3>Mineiro</h3>
+            <div className="products-item">
+                <h2 className="products-info-three">Mineiro</h2>
                 <p>As condições climáticas não eram as melhores nessa primeira escolha e, entre 1800 e 1850, tentou-se o cultivo noutras regiões: o João Alberto Castelo Branco trouxe mudas do Pará</p>
             </div>
         </div>
-        <a href="#">Saiba Mais</a>
+        <a href="#" className="products-btn">Saiba Mais</a>
     </section>
     
-    <section>
-        <div>
+    <section className="address">
+        <div className="address-item">
             <img src={Botafogo} alt='Botafogo'/>
             <div>
                 <h2>Botafogo</h2>
@@ -59,7 +59,7 @@ const HomePage = () => (
                 <a href="#">Ver Mapa</a>
             </div>
         </div>
-        <div>
+        <div className="address-item">
             <img src={Iguatemi} alt="Iguatemi"/>
             <div>
                 <h2>Iguatemi</h2>
@@ -67,7 +67,7 @@ const HomePage = () => (
                 <a href="#">Ver Mapa</a>                
             </div>
         </div>
-        <div>
+        <div className="address-item">
             <img src={Mineirao} alt='Mineirão'/>
             <div>
                 <h2>Mineirão</h2>
@@ -189,6 +189,130 @@ const HomePage = () => (
         text-align: center;
         margin: 20px auto;
         max-width: 460px;
+    }
+
+    .products {
+        background: #e7e4d8;
+        padding: 60px 0;
+        border-top: 3px solid #d6d3c8;
+        border-bottom: 3px solid #d6d3c8;
+    }
+
+    .products-container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .products-container::after, .products-container:before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .products-item {
+        width: 300px;
+        float: left;
+        margin: 0 10px 20px 10px;
+    }
+
+    .products-item h2 {
+        text-align: center;
+        font-size: 2.25em;
+        margin-bottom: 20px;
+    }
+
+    .products-item h2::before {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 100px;
+        background: currentColor;
+        border-radius: 50%;
+        margin: 20px auto;
+        border: 5px solid #e7e4d8;
+        box-shadow: 0 0 0 5px currentColor;
+    }
+
+    h2.products-info-one::before {
+        color: #492901;
+    }
+
+    h2.products-info-two::before {
+        color: #c17139;
+    }
+
+    h2.products-info-three::before {
+        color: #d7a54d;
+    }
+
+    .products-item p {
+        font-size: 0.875em;
+        line-height: 1.4em;
+    }
+
+    .products-btn {
+        width: 180px;
+        border: 3px solid;
+        color: #252525;
+        text-decoration: none;
+        display: block;
+        font-size: 1.125em;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 15px 0;
+        margin: 20px auto 0 auto;
+    }
+
+    .address {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+    .address-item {
+        clear: both;
+        margin: 60px 0;
+    }
+
+    .address-item::after, .address-item::before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .address-item img {
+        width: 460px;
+        float: left;
+        display: block;
+        margin: 0 10px;
+    }
+
+    .address-item > div {
+        width: 460px;
+        float: left;
+        margin: 0 10px;
+    }
+
+    .address-item h2 {
+        font-size: 2.25em;
+        margin-bottom: 20px;
+    }
+
+    .address-item p {
+        font-size: 1.125em;
+        line-height: 1.4em;
+        max-width: 320px;
+        margin-bottom: 40px;
+    }
+
+    .address-item a {
+        font-size: 1.125em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 3px solid;
+        color: #252525;
+        padding: 10x 20px;
     }
 
     `}</style>
