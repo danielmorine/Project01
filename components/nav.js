@@ -41,6 +41,16 @@ const Nav = () => (
       margin: 0 auto;
     }
 
+    @media (max-width: 739px) {
+      .menu {
+        text-align: center;
+      }
+      .menu nav {
+        float: none;
+        clear: both;
+      }
+    }
+
     .menu-container::after, .menu-container::before {
       content: '';
       display: table;
@@ -67,6 +77,7 @@ const Nav = () => (
       color: #fff;
       font-size: 1.125em;
     }
+
     `}</style>
   </header>
  )

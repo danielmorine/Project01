@@ -122,6 +122,12 @@ const HomePage = () => (
         color: #fff;
     }
 
+    @media (max-width: 739px) {
+        .intro {
+            padding: 40px 0;
+        }
+    }
+
     .intro h1 {
         text-transform: uppercase;
         font-size: 3em;
@@ -194,6 +200,26 @@ const HomePage = () => (
         text-align: center;
         margin: 20px auto;
         max-width: 460px;
+    }
+
+    @media (min-width: 740px) and (max-width: 980px) {
+        .about-container {
+            max-width: 720px;
+        }
+
+        .about-item { 
+            width: 340px;
+        }
+    }
+
+    @media (max-width: 739px){
+        .about-container { 
+            max-width: 300px;
+        }
+        .about-item {
+            width: 300px;
+            margin: 0 auto;
+        }
     }
 
     .products {
@@ -269,6 +295,25 @@ const HomePage = () => (
         margin: 20px auto 0 auto;
     }
 
+    @media (min-width: 740px) and (max-width: 980) {
+        .products-container {
+            max-width: 720px;
+        }
+        .products-item {
+            max-width: 220px;
+        }
+    }
+
+    @media (max-width: 739px) {
+        .products-container {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .products-item {
+            margin: 0 auto 20px auto;
+        }
+    }
+
     .address {
         max-width: 960px;
         margin: 0 auto;
@@ -318,6 +363,25 @@ const HomePage = () => (
         border: 3px solid;
         color: #252525;
         padding: 10x 20px;
+    }
+
+    @media (min-width: 740px) and (max-width: 980px) {
+        .address {
+            max-width: 720px;
+        }
+        .address-item div, .address-item img {
+            width: 340px;
+        }
+    }
+
+    @media (max-width: 739px) {
+        .address {
+            max-width: 300px;
+        }
+        .address-item div, .address-item img{
+            width: 300px;
+            margin: 0px;
+        }
     }
 
     .signature {
@@ -384,10 +448,39 @@ const HomePage = () => (
         cursor: pointer;
     }
 
+    @media (min-width: 740px) and (max-width: 980px) {
+        .signature {
+            padding: 15px 0;
+        }
+        .signature-container {
+            max-width: 720px;
+        }
+
+        .signature-info, .signature-info form {
+            max-width: 340px;
+        }
+    }
+
+    @media (max-width: 739px) {
+        .signature-container {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .signature-info, .signature form, .signature form label, .signature input {
+            max-width: 300px;
+        }
+
+        .signature button {
+            margin-top: 5px;
+        }
+    }
+
     .footer {
         background: #d6d3c8;
         padding: 40px 0;        
     }
+
 
     .footer-container {
         max-width: 960px;
@@ -411,6 +504,22 @@ const HomePage = () => (
         float: right;
         margin: 0 10px;
         display: block;
+    }
+
+    @media (max-width: 739px) {
+        .footer-container {
+            max-width: 300px;
+        }
+
+        .footer p {
+            float: none;
+            margin: 0px;
+        }
+
+        .footer img {
+            float: none;
+            margin: 20px 0;
+        }
     }
 
     `}</style>
