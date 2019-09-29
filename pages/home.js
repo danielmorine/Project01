@@ -17,14 +17,14 @@ const HomePage = () => (
         <p>Direto das fazendas de Minas Gerais</p>
     </main>
 
-    <section>
+    <section className="about">
         <h2>Uma Mistura de</h2>
-        <div>
-            <div>
+        <div className="about-container">
+            <div className="about-item">
                 <img src={CafeOne} />
                 <h3>amor</h3>
             </div>
-            <div>
+            <div className="about-item">
                 <img src={CafeTwo}/>
                 <h3>perfeição</h3>
             </div>
@@ -134,6 +134,61 @@ const HomePage = () => (
     .intro p {
         font-style: italic;
         font-size: 1.125em;
+    }
+
+    .about {
+        padding: 60px 0;
+    }
+
+    .about-container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .about-container::after, .about-container::before{
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .about h2 {
+        text-align: center;
+        font-size: 2.25em;
+        margin-bottom: 60px;
+    }
+
+    .about-item {
+        width: 460px;
+        float: left;
+        margin: 0 10px;
+    }
+
+    .about-item img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .about-item h3 {
+        font-size: 2.25em;
+        line-height: 1em;
+        background: #252525;
+        width: 220px;
+        color: #fff;
+        font-style: italic;
+        font-weight: normal;
+        text-align: center;
+        padding: 5px 0 10px 0;
+        top: -25px;
+        position: relative;
+    }
+
+    .about > p {
+        font-size; 1.125em;
+        line-height: 1.4em;
+        font-style: italic;
+        text-align: center;
+        margin: 20px auto;
+        max-width: 460px;
     }
 
     `}</style>
