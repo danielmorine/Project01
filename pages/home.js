@@ -6,12 +6,13 @@ import Botafogo from '../img/botafogo.jpg'
 import Iguatemi from '../img/iguatemi.jpg'
 import Mineirao from '../img/mineirao.jpg'
 import Brafe from '../img/brafe.png'
+import BgIntro from '../img/bg-intro.jpg'
 
 
 const HomePage = () => (
 <div>
     <Nav/>
-    <main>
+    <main className="intro">
         <h1>Cafés com a <br></br>cara do Brasil</h1>
         <p>Direto das fazendas de Minas Gerais</p>
     </main>
@@ -108,6 +109,33 @@ const HomePage = () => (
         font-family: Georgia, serif;
         color: #252525;
     }
+    .intro {
+        background: url(${BgIntro}) no-repeat center center;
+        background-size: cover;
+        padding: 150px 0;
+        text-align: center;
+        color: #fff;
+    }
+
+    .intro h1 {
+        text-transform: uppercase;
+        font-size: 3em;
+    }
+
+    .intro h1::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 4px;
+        background: #fff;
+        margin: 10px auto;
+    }
+
+    .intro p {
+        font-style: italic;
+        font-size: 1.125em;
+    }
+
     `}</style>
 </div>
 )
